@@ -1,0 +1,121 @@
+<div class="p-3 passengerCard" *ngIf="passengerInfo">
+  <div class="d-flex justify-content-between mb-3">
+    <h6 class="pt-1 cardTitle">PASSENGER INFO</h6>
+    <div class="d-flex align-items-center">
+      <span class="mr-2 d-none d-sm-block">Hide Information</span>
+      <mat-slide-toggle
+        [color]="accent"
+        [checked]="passengerInfo?.hideInformation || false"
+      ></mat-slide-toggle>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-4 passengerCard__info">
+      <div class="d-flex flex-column mb-3">
+        <div class="d-flex mb-1">
+          <div class="mr-2">
+            <img
+              src="{{ passengerInfo?.avatar }}"
+              alt="avatar passenger"
+              class="img-responsive img-circle"
+              width="50"
+            />
+          </div>
+          <div class="d-flex flex-column justify-content-center">
+            <span class="mb-15 passengerFullname"
+              >{{ passengerInfo?.firstName }}
+              {{ passengerInfo?.lastName }}</span
+            >
+            <span class="passengerInteractions"
+              >{{ passengerInfo?.interactions }} interactions</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column mb-2">
+        <span class="passengerInfoProperty mb-1">Email</span>
+        <span>{{ passengerInfo?.email }}</span>
+      </div>
+
+      <div class="d-flex flex-column mb-2">
+        <span class="passengerInfoProperty mb-1">Phone</span>
+        <span>{{ passengerInfo?.phoneNumber }}</span>
+      </div>
+
+      <div class="d-flex flex-column mb-2">
+        <span class="passengerInfoProperty mb-1">Location</span>
+        <span>{{ passengerInfo?.email }}</span>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-8">
+      <app-payment-gateway></app-payment-gateway>
+    </div>
+  </div>
+
+  <div
+    class="d-flex justify-content-center align-items-center mt-3 travelSection"
+  >
+    <div class="d-flex flex-column travelInfo">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="assets/icons/check-mark.svg"
+          alt="check mark"
+          class="travelSection_CheckIcon"
+          width="25"
+        />
+      </div>
+      <span class="passengerAddress">
+        {{ passengerInfo?.travelDetails.fromNeighbor }}
+      </span>
+      <span class="passengerAddressStreet">
+        {{ passengerInfo?.travelDetails.fromStreet }}
+      </span>
+    </div>
+    <div class="divider"></div>
+    <div class="d-flex flex-column position-relative">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="assets/icons/geolocation.svg"
+          alt="check mark"
+          class="travelSection_GeoIcon"
+          width="25"
+        />
+      </div>
+      <span class="passengerAddress">
+        {{ passengerInfo?.travelDetails.toNeighbor }}
+      </span>
+      <span class="passengerAddressStreet">
+        {{ passengerInfo?.travelDetails.toStreet }}
+      </span>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="d-flex justify-content-between align-items-center travelSection">
+    <div class="d-flex flex-column">
+      <span class="font-weight-bold text-overflow mb-2"
+        >{{ passengerInfo?.travelDetails.distance }} km</span
+      >
+      <span class="text-overflow">Distance</span>
+    </div>
+    <div class="d-flex flex-column">
+      <span class="font-weight-bold text-overflow mb-2"
+        >{{ passengerInfo?.travelDetails.time }} min</span
+      >
+      <span class="text-overflow">Time</span>
+    </div>
+    <div class="d-flex flex-column">
+      <span class="font-weight-bold text-overflow mb-2"
+        >${{ passengerInfo?.travelDetails.price }}</span
+      >
+      <span class="text-overflow">Price</span>
+    </div>
+    <div class="d-flex flex-column">
+      <span class="font-weight-bold text-overflow mb-2"
+        >{{ passengerInfo?.travelDetails.energy }} kWh</span
+      >
+      <span class="text-overflow">Energy</span>
+    </div>
+  </div>
+</div>

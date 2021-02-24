@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+// Importing Bootstrap
+@import "~bootstrap";
+
+body,
+html {
+  background-color: #f1f4fb;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}

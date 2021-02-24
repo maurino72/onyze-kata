@@ -1,0 +1,28 @@
+@mixin colors($property) {
+  &-active {
+    #{$property}: #233cfa;
+  }
+}
+
+.payment-color {
+  @include colors(background-color);
+}
+
+// @media (max-width: 576px) {
+//   .paymenticons {
+//     width: 50px;
+//   }
+// }
+
+.paymentButtons {
+  font-size: 20px;
+  height: 100;
+  border: 1px solid #8493a9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.paymentIcons {
+  width: 60px;
+  height: 80px;
+}

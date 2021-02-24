@@ -1,0 +1,67 @@
+.passengerCard {
+  background-color: #fff;
+  // border: 1px solid #030303;
+  border-radius: 5px;
+  max-width: 750px;
+  margin: auto;
+  box-shadow: 0 2px 8px 0 rgba(224, 229, 238, 0.3);
+
+  .cardTitle {
+    color: #8493a9;
+    font-size: 15px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+  }
+
+  .passengerFullname {
+    font-weight: bold;
+  }
+
+  .passengerInteractions {
+    color: #8493a9;
+  }
+
+  .passengerInfoProperty {
+    color: #8493a9;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .travelSection {
+    max-width: 500px;
+    margin: auto;
+
+    .travelSection_CheckIcon {
+      background-color: #cad4fb;
+      padding: 5px;
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+    }
+    .travelSection_GeoIcon {
+      background-color: #ceedcd;
+      padding: 5px;
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+    }
+
+    .passengerAddress {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .passengerAddressStreet {
+      color: #8493a9;
+      font-size: 14px;
+    }
+  }
+
+  .divider {
+    width: calc(100% - 80px);
+    height: 2px;
+    background-color: #8493a9;
+    position: relative;
+    margin: 10px auto;
+  }
+}
